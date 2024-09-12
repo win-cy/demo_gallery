@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.container {
+  display: grid;
+  grid-template: 1fr 1fr / repeat(4, 1fr);
+  width: 80%;
+  height: 80%;
+  padding: 30px;
+  gap: 10px;
+  max-width: 1280px;
+}
+
+.container div {
+  padding: 20px;
+  filter: grayscale(1);
+}
+
+.container div:hover {
+  filter: grayscale(0%);
+  transform: scale(1.15, 1.15);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  box-shadow: 5px; 
+  box radius: 3px;
+  object-fit: cover; 
+  transition: 0.1s;
+  aspect-ratio: 1;
+}
+
+.c1 {
+  grid-area: 1/1/3/3;
+}
+.c2 {
+  grid-area: 1/4/2/5;
+}
+.c3 {
+  grid-area: 1/3/2/4;
+}
+.c4 {
+  grid-area: 2/3/3/4;
+}
+.c5 {
+  grid-area: 2/4/3/5;
+}
+
+.c6 {
+  grid-area: 3/1/4/2;
+}
+.c7 {
+  grid-area: 3/2/4/3;
+}
+.c8 {
+  grid-area: 4/2/5/3;
+}
+.c9 {
+  grid-area: 4/1/5/2;
+}
+.c10 {
+  grid-area: 3/3/5/5;
+}
+
+.c11 {
+  grid-area: 5/1/7/3;
+}
+.c12 {
+  grid-area: 5/4/6/5;
+}
+.c13 {
+  grid-area: 5/3/6/4;
+}
+.c14 {
+  grid-area: 6/3/7/4;
+}
+.c15 {
+  grid-area: 6/4/7/5;
+}
+
+@media (max-width: 640px) {
+    .container {
+      max-width: 85%;
+      display: flex;
+      flex-direction: column;
+  }
+}
